@@ -2,8 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
+  color-scheme: light;
   color: white;
   background-color: #242424;
   font-synthesis: none;
@@ -370,6 +369,7 @@ textarea {
   max-width: calc(100% - 40px);
   padding-top: 10px;
   border-radius: 5px;
+  border:none;
   padding-inline:20px;
 }
 .email-sent {

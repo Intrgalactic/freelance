@@ -6,7 +6,6 @@ import { useWindowScroll } from "@uidotdev/usehooks";
 const MobileNav = () => {
     const [toggleNav, setToggleNav] = useState();
     const navRef = useRef();
-    const [{x,y},scrollTo] = useWindowScroll();
     useEffect(() => {
         toggleNav !== undefined && navRef.current.classList.toggle("visible-mobile-nav__container");
         toggleNav === true ? document.body.style.overflowY = "hidden" : null;
