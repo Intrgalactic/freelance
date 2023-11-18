@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const AppBox = ({src,link,name}) => {
+const AppBox = ({src,link,name,index}) => {
     const appAnim = {
         hidden: {
             opacity: 0,
@@ -12,7 +12,7 @@ const AppBox = ({src,link,name}) => {
         }
     }
     return (
-        <motion.div className="app-box" variants={appAnim} initial="hidden" transition={{type:'spring',duration:1.5}} whileInView="visible" viewport={{once:true}}> 
+        <motion.div className="app-box" id={`app-box-${index}`} variants={appAnim} initial="hidden" transition={{type:'spring',duration:1.5}} whileInView="visible" viewport={{once:true}}> 
             <img src={src} alt="app" width="160px" height="150px"/>
             <p>{name}</p>
             <a className="app-box-link" href={link} target="_blank">Check Out</a>

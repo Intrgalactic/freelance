@@ -40,7 +40,9 @@ p, a {
   font-family: MarbyProRegular;
   margin: 0;
 }
-
+a {
+  cursor: pointer;
+}
 header {
   position: fixed;
   top: 0;
@@ -336,9 +338,10 @@ img:not(.nav-icon) {
   opacity: 1;
 }
 .contact__form button {
-  width: 120px;
-  min-height: 40px;
+  width: 140px;
+  min-height: 50px;
   background-color: black;
+  font-size: 1.1em;
   border-radius: 5px;
   border:2px solid white;
   color:white;
@@ -362,6 +365,7 @@ textarea {
   padding-top: 10px;
   padding-inline:20px;
 }
+
 @media screen and (min-width:650px) {
   h1 {
       font-size: 3em;
@@ -398,6 +402,15 @@ textarea {
     font-size: 1.1em;
     margin:auto;
   }
+  .contact h2 {
+    font-size: 2.5em;
+  }
+  .contact__container p {
+    font-size: 1.3em;
+  }
+}
+body::-webkit-scrollbar {
+  width: 0;
 }
 @media screen and (min-width:1024px) {
   .desktop-nav {
@@ -419,7 +432,7 @@ textarea {
       font-size: 4em;
   }
   .hero__technologies-container h2 {
-      font-size: 3em;
+      font-size: 4em;
   }
   .hero__technologies-container p {
       font-size: 1.9em;
@@ -429,8 +442,10 @@ textarea {
       height: 300px;
   }
   .app-box {
-      width: 300px;
+      max-width: 300px;
       height: 400px;
+      width: 300px;
+      min-width: calc(33.3% - 40px - 200px / 3);
   }
   .app-box p {
       font-size: 1.5em;
@@ -448,5 +463,59 @@ textarea {
     font-size: 1.3em;
     text-align: center;
     margin:auto;
+  }
+
+  .contact__container__inner,.contact__container p,.contact__links{
+    width: 50vw;
+  }
+  .contact__form {
+    bottom:auto;
+    top:0;
+    right: 5vw;
+    width: 30vw;
+    height: 600px;
+    left:auto;
+  }
+  .contact__form input {
+    height: 60px;
+  }
+  textarea,.contact__form input  {
+    font-size: 1.4em;
+  }
+  textarea {
+    height: 150px;
+  }
+  .contact h2 {
+    font-size: 4em;
+  }
+  .contact__container p {
+    font-size: 1.5em;
+  }
+  .contact__links img {
+    height: 150px;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    width: auto;
+  }
+  .contact__links a:hover img {
+    transform: rotate(360deg);
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    overflow: hidden;
+  }
+  .carousel-items {
+    display: flex;
+    max-width: calc(60vw + 200px);
+    overflow: hidden;
+    column-gap: 100px;
+  }
+  
+  .carousel-btn {
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
   }
 }

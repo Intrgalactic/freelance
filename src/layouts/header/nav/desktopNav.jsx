@@ -4,9 +4,9 @@ const DesktopNav = () => {
 
     return (
         <div className="desktop-nav">
-            <a href="#projects">PROJECTS</a>
+            <a onClick={() => {document.getElementById("apps").scrollIntoView({behavior:"smooth",block:"center",inline:"center"})}}>PROJECTS</a>
             <HeaderLogo/>
-            <a href="#hire">HIRE</a>
+            <a onClick={() => {document.getElementById("contact").scrollIntoView({behavior:"smooth",block:"center",inline:"center"})}}>HIRE</a>
         </div>
     )
 }

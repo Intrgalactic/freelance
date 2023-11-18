@@ -21,8 +21,8 @@ const MobileNav = () => {
             <img src={navIcon} alt="navigation icon" className="nav-icon" width="50px" height="30px" onClick={() => { setToggleNav(!toggleNav) }} />
             <div className="mobile-nav__container" ref={navRef}>
                 <div className="mobile-nav__container-links">
-                    <a href="#projects">Projects</a>
-                    <a href="#hire">Hire</a>
+                    <a  onClick={() => {setToggleNav(!toggleNav);document.body.style.overflowY = "auto";document.getElementById("apps").scrollIntoView({behavior:"smooth",block:"start",inline:"center"})}} >Projects</a>
+                    <a onClick={() => {setToggleNav(!toggleNav);document.body.style.overflowY = "auto";document.getElementById("contact").scrollIntoView({behavior:"smooth",block:"center",inline:"center"})}}>Hire</a>
                 </div>
             </div>
         </div>
