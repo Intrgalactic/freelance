@@ -329,6 +329,8 @@ img:not(.nav-icon) {
   padding-inline:20px;
   font-family: MarbyProHeavy;
   color:black;
+  background-color: white;
+  opacity: 1;
   -webkit-appearance: none;
   appearance: none;
 }
