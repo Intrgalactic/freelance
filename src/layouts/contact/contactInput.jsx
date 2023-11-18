@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 const ContactInput = forwardRef((props,ref) => {
     return (
-        <input type={props.type} onChange={(e) => {ref.current.value = e.target.value}} placeholder={props.placeholder}/>
+        <input ref={ref} name={props.name} type={props.type} placeholder={props.placeholder}/>
     )
 })
 

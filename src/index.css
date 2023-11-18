@@ -367,9 +367,25 @@ textarea {
   -webkit-appearance: none;
   max-width: calc(100% - 40px);
   padding-top: 10px;
+  border-radius: 5px;
   padding-inline:20px;
 }
-
+.email-sent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:2px solid white;
+  border-radius: 5px;
+  padding-inline:20px;
+  padding-block: 10px;
+}
+.email-sent img {
+  width: auto;
+  height: 50px;
+}
+.contact__form .wrong-input {
+  border:2px solid red;
+}
 @media screen and (min-width:650px) {
   h1 {
       font-size: 3em;

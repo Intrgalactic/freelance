@@ -9,7 +9,7 @@ const MobileNav = () => {
     const [{x,y},scrollTo] = useWindowScroll();
     useEffect(() => {
         toggleNav !== undefined && navRef.current.classList.toggle("visible-mobile-nav__container");
-        toggleNav === true && scrollTo(0,0), document.body.style.overflowY = "hidden";
+        toggleNav === true ? document.body.style.overflowY = "hidden" : null;
         toggleNav !== true ? document.body.style.overflowY = "auto" : null;
         return () => {
             document.body.style.overflowY = "auto";
