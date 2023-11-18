@@ -333,6 +333,12 @@ img:not(.nav-icon) {
   -webkit-appearance: none;
   appearance: none;
 }
+input {
+  background-color: white;
+  opacity: 1;
+  color:black;
+  
+}
 .contact__form input:focus {
   outline:2px solid black;
 }
