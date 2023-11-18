@@ -8,7 +8,7 @@ import { useWindowScroll } from '@uidotdev/usehooks';
 import Contact from './layouts/contact/contact';
 
 function App() {
-  const [headerToggled,setHeaderToggled] = useState(false);
+  const [headerToggled,setHeaderToggled] = useState(undefined);
   const headerRef = useRef();
   const [{x,y},scrollTo] = useWindowScroll();
 
@@ -22,7 +22,7 @@ function App() {
   },[y]);
 
   useEffect(() => {
-    headerRef.current.classList.toggle('active-header');
+    headerToggled !== undefined && headerRef.current.classList.add('active-header');
   },[headerToggled])
 
   return (
