@@ -329,6 +329,8 @@ img:not(.nav-icon) {
   padding-inline:20px;
   font-family: MarbyProHeavy;
   color:black;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .contact__form input:focus {
   outline:2px solid black;
@@ -361,6 +363,8 @@ textarea {
   min-height: 80px;
   padding:0;
   min-width: max-content;
+  appearance: none;
+  -webkit-appearance: none;
   max-width: calc(100% - 40px);
   padding-top: 10px;
   padding-inline:20px;
